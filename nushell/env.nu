@@ -102,7 +102,6 @@ $env.EDITOR = '/opt/homebrew/bin/hx'
 $env.PATH = (
     $env.PATH
     | split row (char esep)
-    | prepend '/Library/Frameworks/GStreamer.framework/Versions/1.0/bin'
     | append '~/.cargo/bin'
     | append '/opt/homebrew/bin'
     | append '/usr/local/bin'

@@ -1,4 +1,8 @@
 # "$schema" = 'https://starship.rs/config-schema.json'
+# [┌─]
+# [└─]
+# [╭─]
+# [╰─]
 
 format = """
 [┌─](#FFFFFF) \
@@ -207,4 +211,3 @@ error_symbol = '[└─](#FF0000)'
 show_always = true
 disabled = false
 format = '\[[$user]($style)\] '
-
