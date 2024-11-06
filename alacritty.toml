@@ -1,6 +1,6 @@
-[shell]
-program = "/Users/qoidnaufal/.cargo/bin/nu"
-args = ["-l"]
+# [terminal.shell]
+# program = "/Users/qoidnaufal/.cargo/bin/nu"
+# args = ["-l"]
 # args = ["-e", "zellij"]
 
 [scrolling]
@@ -11,12 +11,16 @@ multiplier = 3
 transparent_background_colors = true
 
 [window]
-decorations = "Buttonless"
-padding = { x = 3, y = 5 }
-opacity = 0.75
+# decorations = "Buttonless"
+# position = { x = 15, y = 80 }
+# dimensions = { columns = 256, lines = 63 }
+# padding = { y = 5 }
+dynamic_padding = true
+# opacity = 0.87
 # blur = true
 startup_mode = "Maximized"
 option_as_alt = "Both"
+dynamic_title = false
 
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\\t"

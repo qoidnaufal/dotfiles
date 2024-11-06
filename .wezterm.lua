@@ -13,11 +13,13 @@ end)
 local config = wezterm.config_builder()
 
 config.color_scheme = 'Gruvbox dark, pale (base16)'
-config.font = wezterm.font 'Hack Nerd Font'
--- config.default_prog = { '/Users/qoidnaufal/.cargo/bin/nu', '-l' }
-config.enable_tab_bar = false
+config.font = wezterm.font 'JetBrainsMono Nerd Font'
+config.default_prog = { '/Users/qoidnaufal/.cargo/bin/nu', '-l' }
+-- config.enable_tab_bar = false
+config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "RESIZE"
--- config.window_background_opacity = 0.87
+config.window_background_opacity = 0.85
+config.macos_window_background_blur = 20
 
 config.keys = {
   {
@@ -78,4 +80,3 @@ config.keys = {
 }
 
 return config
-
