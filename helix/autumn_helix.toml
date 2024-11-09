@@ -15,9 +15,9 @@
 "constructor" = "my_yellow1"
 "debug" = "my_yellow2"
 "diagnostic.error" = { underline = { style = "curl", color = "my_red" } }
-"diagnostic.hint" = { underline = { style = "line", color = "my_gray5" }, bg = "my_black"}
+"diagnostic.hint" = { underline = { style = "line", color = "my_gray5" } } #, bg = "my_black"}
 "diagnostic.info" = { underline = { style = "line" } }
-"diagnostic" = { underline = { style = "line", color = "my_gray5" }, bg = "my_black"}
+"diagnostic" = { underline = { style = "line", color = "my_gray5" } }#, bg = "my_black"}
 "diagnostic.warning" = { underline = { style = "curl", color = "my_yellow2" } }
 # "diagnostic.unnecessary" = { modifiers = ["dim"] }
 "diagnostic.deprecated" = { modifiers = ["crossed_out"] }
@@ -50,7 +50,7 @@
 # "ui.cursorline" = { bg = "my_gray3" }
 # "ui.cursorline.primary" = { bg = "my_black" }
 # "ui.cursorline.secondary" = { bg = "my_black" }
-"ui.cursor.match" = { fg = "my_white1", modifiers = ["bold"], bg = "my_turquoise1"}
+"ui.cursor.match" = { fg = "my_white1", modifiers = ["bold"], bg = "my_red"}
 "ui.cursor.primary" = { fg = "my_white1", modifiers = ["reversed"] }
 "ui.debug" = { fg = "my_yellow1", bg = "my_gray0" }
 # "ui.gutter" = { bg = "my_gray0" }
@@ -58,9 +58,9 @@
 "ui.highlight.frameline" = { bg = "#8b6904" }
 "ui.linenr" = { fg = "my_gray7" } #, bg = "my_gray0" }
 "ui.linenr.selected" = { fg = "my_red" } #, bg = "my_gray0"}
-"ui.bufferline" = { fg = "my_white2", bg = "my_gray2" }
+"ui.bufferline" = { fg = "my_white2" } #, bg = "my_gray2" }
 "ui.bufferline.active" = { fg = "my_black", bg = "my_green" }
-"ui.bufferline.background" = { bg = "my_gray0" }
+# "ui.bufferline.background" = { bg = "my_gray0" }
 "ui.menu" = { fg = "my_white1", bg = "my_gray2" }
 "ui.menu.selected" = { fg = "my_gray2", bg = "my_gray6" }
 "ui.popup" = { bg = "my_gray2" }
