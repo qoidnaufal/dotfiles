@@ -1,40 +1,26 @@
-# "$schema" = 'https://starship.rs/config-schema.json'
-# [┌─]
-# [└─]
-# [╭─]
-# [╰─]
+"$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[┌─](#FFFFFF) \
+[┌─](#ffffff) \
 $username\
 $directory\
 $git_branch\
 $git_status\
+$rust\
+$zig\
+$python\
+$nodejs\
+$swift\
+$lua\
+$c\
 $package\
-$all\
-$cmd_duration\
 $line_break$character"""
-
-# right_format = """
-# $time \
-# $os\
-# $line_break
-# """
-
-[aws]
-symbol = "  "
 
 [buf]
 symbol = " "
 
 [c]
 symbol = " "
-
-[conda]
-symbol = " "
-
-# [cmd_duration]
-# format = 'took [$duration]($style)'
 
 [crystal]
 symbol = " "
@@ -44,8 +30,7 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
-truncation_length = 3
-# truncation_symbol = "…/"
+truncation_length = 2
 
 [docker_context]
 symbol = " "
@@ -59,12 +44,6 @@ symbol = " "
 [fennel]
 symbol = " "
 
-[fossil_branch]
-symbol = " "
-
-[git_branch]
-symbol = " "
-
 [golang]
 symbol = " "
 
@@ -76,9 +55,6 @@ symbol = " "
 
 [haxe]
 symbol = " "
-
-[hg_branch]
-symbol = " "
 
 [hostname]
 ssh_symbol = " "
@@ -113,54 +89,6 @@ symbol = " "
 [ocaml]
 symbol = " "
 
-# [os]
-# disabled = false
-
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
-
 [package]
 symbol = "󰏗 "
 
@@ -169,9 +97,6 @@ symbol = " "
 
 [php]
 symbol = " "
-
-[pijul_channel]
-symbol = " "
 
 [python]
 symbol = " "
@@ -194,20 +119,101 @@ symbol = " "
 [zig]
 symbol = " "
 
-# [time]
-# disabled = false
-# time_format = "%R"
-# format = '  $time'
-
 [line_break]
 disabled = false
 
 [character]
 disabled = false
-success_symbol = '[└─](#FFFFFF)'
-error_symbol = '[└─](#FF0000)'
+success_symbol = '[└─](#ffffff)'
+error_symbol = '[└─](#ff0000)'
 
 [username]
 show_always = true
 disabled = false
 format = '\[[$user]($style)\] '
+
+# tokyo night
+
+# format = """
+# [░▒▓](#a3aed2)\
+# [  ](bg:#a3aed2 fg:#090c0c)\
+# [](bg:#769ff0 fg:#a3aed2)\
+# $directory\
+# [](fg:#769ff0 bg:#394260)\
+# $git_branch\
+# $git_status\
+# [](fg:#394260 bg:#212736)\
+# $c\
+# $nodejs\
+# $rust\
+# $zig\
+# $swift\
+# [ ](fg:#212736 bg:#1d2230)\
+# """
+# # \n$character"""
+# # $time\
+# # [ ](fg:#1d2230)\
+
+# [directory]
+# # style = "fg:#e3e5e5 bg:#769ff0"
+# style = "fg:#000000 bg:#769ff0"
+# format = "[ $path ]($style)"
+# truncation_length = 3
+# truncation_symbol = "…/"
+
+# # [directory.substitutions]
+# # "Documents" = "󰈙 "
+# # "Downloads" = " "
+# # "Music" = " "
+# # "Pictures" = " "
+
+# [git_branch]
+# symbol = ""
+# style = "bg:#394260"
+# format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+
+# [git_status]
+# style = "bg:#394260"
+# format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+
+# [nodejs]
+# symbol = " "
+# style = "bg:#212736"
+# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+# # format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
+
+# [rust]
+# symbol = ""
+# style = "bg:#212736"
+# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+# # format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
+
+# [c]
+# symbol = ""
+# style = "bg:#212736"
+# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+# # format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
+
+# [zig]
+# symbol = ""
+# style = "bg:#212736"
+# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+# # format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
+
+# [swift]
+# symbol = ""
+# style = "bg:#212736"
+# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+# # format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
+
+# [python]
+# symbol = ""
+# style = "bg:#212736"
+# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+# # format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
+
+# # [time]
+# # disabled = false
+# # time_format = "%R" # Hour:Minute Format
+# # style = "bg:#1d2230"
+# # format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'

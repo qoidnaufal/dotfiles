@@ -1,5 +1,5 @@
-# [terminal.shell]
-# program = "/Users/qoidnaufal/.cargo/bin/nu"
+[terminal.shell]
+program = "/Users/qoidnaufal/.cargo/bin/nu"
 # args = ["-l"]
 # args = ["-e", "zellij"]
 
@@ -10,11 +10,14 @@ multiplier = 3
 [colors]
 transparent_background_colors = true
 
+[colors.primary]
+background = "#232323"
+
 [window]
 # decorations = "Buttonless"
 # position = { x = 15, y = 80 }
 # dimensions = { columns = 256, lines = 63 }
-# padding = { y = 5 }
+padding = { x = 5, y = 3 }
 dynamic_padding = true
 # opacity = 0.87
 # blur = true
@@ -34,3 +37,9 @@ normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
 italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
 bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+
+[keyboard]
+bindings = [
+  { key = "L", mods = "Command | Shift", action = "SelectNextTab" },
+  { key = "H", mods = "Command | Shift", action = "SelectPreviousTab" },
+]

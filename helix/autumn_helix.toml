@@ -50,7 +50,7 @@
 # "ui.cursorline" = { bg = "my_gray3" }
 # "ui.cursorline.primary" = { bg = "my_black" }
 # "ui.cursorline.secondary" = { bg = "my_black" }
-"ui.cursor.match" = { fg = "my_white1", modifiers = ["bold"], bg = "my_red"}
+"ui.cursor.match" = { fg = "my_red", underline = { style = "line" }, modifiers = ["bold"] }
 "ui.cursor.primary" = { fg = "my_white1", modifiers = ["reversed"] }
 "ui.debug" = { fg = "my_yellow1", bg = "my_gray0" }
 # "ui.gutter" = { bg = "my_gray0" }
