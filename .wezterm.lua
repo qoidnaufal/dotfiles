@@ -1,20 +1,17 @@
 local wezterm = require 'wezterm'
 local mux = wezterm.mux
 
-wezterm.on('gui-attached', function(domain)
-  local workspace = mux.get_active_workspace()
-  for _, window in ipairs(mux.all_windows()) do
-    if window:get_workspace() == workspace then
-      window:gui_window() :maximize()
-    end
-  end
+wezterm.on('gui-startup', function(window)
+  local _, _, window = mux.spawn_window(cmd or {})
+  local gui_window = window:gui_window();
+  gui_window:maximize()
 end)
 
 local config = wezterm.config_builder()
 
 config.color_scheme = 'Gruvbox dark, pale (base16)'
 config.font = wezterm.font 'JetBrainsMono Nerd Font'
-config.default_prog = { '/Users/qoidnaufal/.cargo/bin/nu', '-l' }
+-- config.default_prog = { '/Users/qoidnaufal/.cargo/bin/nu', '-l' }
 -- config.enable_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "RESIZE"
