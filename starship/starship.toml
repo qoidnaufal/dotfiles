@@ -1,219 +1,66 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+add_newline = false
+palette = "default"
 format = """
-[┌─](#ffffff) \
-$username\
+
+$status\
 $directory\
 $git_branch\
 $git_status\
-$rust\
-$zig\
-$python\
-$nodejs\
-$swift\
-$lua\
-$c\
-$package\
-$line_break$character"""
+$cmd_duration\
+$time\
+$character\
+"""
 
-[buf]
-symbol = " "
+[palettes.default]
+prompt_ok  = "#8047c1"
+prompt_err = "#e23140"
+icon       = "#161514"
+separator  = "#35312c"
+bg0        = "#504945"
+fg0        = "#e9f42d"
 
-[c]
-symbol = " "
-
-[crystal]
-symbol = " "
-
-[dart]
-symbol = " "
-
-[directory]
-read_only = " 󰌾"
-truncation_length = 2
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-[fennel]
-symbol = " "
-
-[golang]
-symbol = " "
-
-[guix_shell]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = " "
-
-[hostname]
-ssh_symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[kotlin]
-symbol = " "
-
-[lua]
-symbol = " "
-
-[memory_usage]
-symbol = "󰍛 "
-
-[meson]
-symbol = "󰔷 "
-
-[nim]
-symbol = "󰆥 "
-
-[nix_shell]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[ocaml]
-symbol = " "
-
-[package]
-symbol = "󰏗 "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
-[python]
-symbol = " "
-
-[rlang]
-symbol = "󰟔 "
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = " "
-
-[scala]
-symbol = " "
-
-[swift]
-symbol = " "
-
-[zig]
-symbol = " "
-
-[line_break]
-disabled = false
+directory  = "#9f31e2"
+duration   = "#e26f31"
+status     = "#e23140"
+git_branch = "#31e268"
+git_status = "#31e268"
 
 [character]
+success_symbol = "[ ❯](fg:prompt_ok)"
+error_symbol = "[ ❯](fg:prompt_err)"
+
+[status]
+format = "[─](fg:separator)[](fg:status)[](fg:icon bg:status)[](fg:status bg:bg0)[ $status](bg:bg0)[](fg:bg0)"
+pipestatus = true
+pipestatus_separator = "-"
+pipestatus_segment_format = "$status"
+pipestatus_format = "[─](fg:separator)[](fg:status)[](fg:icon bg:status)[](fg:status bg:bg0)[ $pipestatus](bg:bg0)[](fg:bg0)"
 disabled = false
-success_symbol = '[└─](#ffffff)'
-error_symbol = '[└─](#ff0000)'
 
-[username]
-show_always = true
-disabled = false
-format = '\[[$user]($style)\] '
+[directory]
+format = "[─](fg:separator)[](fg:directory)[](fg:icon bg:directory)[](fg:directory bg:bg0)[ $path](bg:bg0 fg:fg0)[](fg:bg0)"
+truncate_to_repo = false
+truncation_length = 0
 
-# tokyo night
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = "󰝚"
+"Pictures" = ""
+"Repos" = "󰲋"
 
-# format = """
-# [░▒▓](#a3aed2)\
-# [  ](bg:#a3aed2 fg:#090c0c)\
-# [](bg:#769ff0 fg:#a3aed2)\
-# $directory\
-# [](fg:#769ff0 bg:#394260)\
-# $git_branch\
-# $git_status\
-# [](fg:#394260 bg:#212736)\
-# $c\
-# $nodejs\
-# $rust\
-# $zig\
-# $swift\
-# [ ](fg:#212736 bg:#1d2230)\
-# """
-# # \n$character"""
-# # $time\
-# # [ ](fg:#1d2230)\
+[git_branch]
+format = "[─](fg:separator)[](fg:git_branch)[](fg:icon bg:git_branch)[](fg:git_branch bg:bg0)[ $branch](bg:bg0 fg:fg0)"
 
-# [directory]
-# # style = "fg:#e3e5e5 bg:#769ff0"
-# style = "fg:#000000 bg:#769ff0"
-# format = "[ $path ]($style)"
-# truncation_length = 3
-# truncation_symbol = "…/"
+[git_status]
+format = "[](fg:bg0 bg:git_status)[$all_status$ahead_behind](fg:icon bg:git_status)[](fg:git_status)"
 
-# # [directory.substitutions]
-# # "Documents" = "󰈙 "
-# # "Downloads" = " "
-# # "Music" = " "
-# # "Pictures" = " "
+[cmd_duration]
+format = "[─](fg:separator)[](fg:duration)[󱐋](fg:icon bg:duration)[](fg:duration bg:bg0)[ $duration](bg:bg0 fg:fg0)[](fg:bg0)"
+min_time = 1000
 
-# [git_branch]
-# symbol = ""
-# style = "bg:#394260"
-# format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
-
-# [git_status]
-# style = "bg:#394260"
-# format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
-
-# [nodejs]
-# symbol = " "
-# style = "bg:#212736"
-# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-# # format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
-
-# [rust]
-# symbol = ""
-# style = "bg:#212736"
-# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-# # format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
-
-# [c]
-# symbol = ""
-# style = "bg:#212736"
-# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-# # format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
-
-# [zig]
-# symbol = ""
-# style = "bg:#212736"
-# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-# # format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
-
-# [swift]
-# symbol = ""
-# style = "bg:#212736"
-# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-# # format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
-
-# [python]
-# symbol = ""
-# style = "bg:#212736"
-# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-# # format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
-
-# # [time]
-# # disabled = false
-# # time_format = "%R" # Hour:Minute Format
-# # style = "bg:#1d2230"
-# # format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+[time]
+format = "[─](fg:separator)[](fg:duration)[󰥔](fg:icon bg:duration)[](fg:duration bg:bg0)[ $time](bg:bg0 fg:fg0)[](fg:bg0)"
+disabled = true
