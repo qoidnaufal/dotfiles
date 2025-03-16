@@ -32,15 +32,15 @@ success_symbol = "[ ❯](fg:prompt_ok)"
 error_symbol = "[ ❯](fg:prompt_err)"
 
 [status]
-format = "[─](fg:separator)[](fg:status)[](fg:icon bg:status)[](fg:status bg:bg0)[ $status](bg:bg0)[](fg:bg0)"
+format = "[](fg:status)[](fg:icon bg:status)[](fg:status bg:bg0)[ $status](bg:bg0)[](fg:bg0)[─](fg:separator)"
 pipestatus = true
 pipestatus_separator = "-"
 pipestatus_segment_format = "$status"
-pipestatus_format = "[─](fg:separator)[](fg:status)[](fg:icon bg:status)[](fg:status bg:bg0)[ $pipestatus](bg:bg0)[](fg:bg0)"
+pipestatus_format = "(fg:separator)[](fg:status)[](fg:icon bg:status)[](fg:status bg:bg0)[ $pipestatus](bg:bg0)[](fg:bg0)[─](fg:separator)"
 disabled = false
 
 [directory]
-format = "[─](fg:separator)[](fg:directory)[](fg:icon bg:directory)[](fg:directory bg:bg0)[ $path](bg:bg0 fg:fg0)[](fg:bg0)"
+format = "[](fg:directory)[](fg:icon bg:directory)[](fg:directory bg:bg0)[ $path](bg:bg0 fg:fg0)[](fg:bg0)"
 truncate_to_repo = false
 truncation_length = 0
 
