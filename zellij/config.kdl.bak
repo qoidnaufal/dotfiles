@@ -1,0 +1,10 @@
+scrollback_editor "/opt/homebrew/bin/hx"
+default_shell "nu"
+copy_command "pbcopy"
+session_serialization false
+// theme "gruvbox-dark"
+
+// keybinds {
+// 	unbind "Alt Shift H"
+// 	unbind "Alt Shift L"
+// }

@@ -1,0 +1,78 @@
+# rust
+[[language]]
+name = "rust"
+scope = "source.rust"
+injection-regex = "rs|rust"
+file-types = ["rs"]
+roots = ["Cargo.toml", "Cargo.lock"]
+shebangs = ["rust-script", "cargo"]
+comment-tokens = ["//", "///", "//!"]
+block-comment-tokens = [
+  { start = "/*", end = "*/" },
+  { start = "/**", end = "*/" },
+  { start = "/*!", end = "*/" },
+]
+language-servers = ["rust-analyzer"]
+indent = { tab-width = 4, unit = "    " }
+persistent-diagnostic-sources = ["rustc", "clippy"]
+auto-format = false
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+# config = { procMacro = { ignored =
+#     { leptos_macro =
+#         [
+#           # Optional:
+#           # "component",
+#           "server"
+#         ] } } }
+
+[language-server.rust-analyzer.config]
+inlayHints.bindingModeHints.enable = false
+inlayHints.closingBraceHints.minLines = 10
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.hideClosureInitialization = false
+
+# [[grammar]]
+# name = "rust"
+# source = { git = "https://github.com/tree-sitter/tree-sitter-rust", rev = "9c84af007b0f144954adb26b3f336495cbb320a7" }
+
+# zig
+[[language]]
+name = "zig"
+scope = "source.zig"
+injection-regex = "zig"
+file-types = ["zig", "zon"]
+roots = ["build.zig"]
+auto-format = true
+comment-token = "//"
+language-servers = ["zls"]
+indent = { tab-width = 4, unit = "    " }
+formatter = { command = "zig" , args = ["fmt", "--stdin"] }
+
+[language-server.zls]
+command = "zls"
+
+# [[grammar]]
+# name = "zig"
+# source = { git = "https://github.com/maxxnino/tree-sitter-zig", rev = "0d08703e4c3f426ec61695d7617415fff97029bd" }
+
+# slint
+[[language]]
+name = "slint"
+scope = "source.slint"
+injection-regex = "slint"
+file-types = ["slint"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+indent = { tab-width = 4, unit = "    " }
+language-servers = [ "slint-lsp" ]
+
+[language-server]
+slint-lsp = { command = "slint-lsp", args = [] }
+
+# [[grammar]]
+# name = "slint"
+# source = { git = "https://github.com/slint-ui/tree-sitter-slint", rev = "4a0558cc0fcd7a6110815b9bbd7cc12d7ab31e74" }

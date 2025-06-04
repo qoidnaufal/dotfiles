@@ -1,0 +1,45 @@
+[terminal.shell]
+program = "/Users/qoidnaufal/.cargo/bin/nu"
+# args = ["-l"]
+args = ["-e", "zellij"]
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[colors]
+transparent_background_colors = true
+
+[colors.primary]
+background = "#232323"
+
+[window]
+# decorations = "Transparent"
+# position = { x = 15, y = 80 }
+# dimensions = { columns = 256, lines = 63 }
+# padding = { x = 5, y = 3 }
+# dynamic_padding = true
+# opacity = 0.77
+# blur = true
+startup_mode = "Maximized"
+option_as_alt = "Both"
+dynamic_title = false
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\\t"
+save_to_clipboard = false
+
+[terminal]
+osc52 = "CopyPaste"
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+
+[keyboard]
+bindings = [
+  { key = "L", mods = "Command | Shift", action = "SelectNextTab" },
+  { key = "H", mods = "Command | Shift", action = "SelectPreviousTab" },
+]

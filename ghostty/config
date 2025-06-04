@@ -1,0 +1,10 @@
+command = ~/.cargo/bin/nu
+window-width = 256
+window-height = 64
+macos-option-as-alt = true
+background-opacity = 0.87
+background-blur-radius = 20
+cursor-style = bar
+cursor-style-blink = false
+font-family = "JetBrainsMono NFM Regular"
+font-size = 11
