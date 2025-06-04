@@ -35,33 +35,23 @@ source "$PLUGIN_DIR/apple.sh"
 
 # Workspaces
 workspaces=$(aerospace list-workspaces --all)
-first_workspace=$(echo "$workspaces" | head -n 1)
-last_workspace=$(echo "$workspaces" | tail -n 1)
-
 sketchybar --add event aerospace_workspace_change
 
 for sid in $workspaces; do
 	sketchybar --add item space.$sid left \
-			   --subscribe space.$sid aerospace_workspace_change \
-			   --set space.$sid \
-			     background.corner_radius=20 \
-			     background.height=24 \
-			     background.drawing=off \
-			     label.align=center \
-			     label.width=20 \
-			     label="$sid" \
-			     click_script="aerospace workspace $sid" \
-			     script="$CONFIG_DIR/plugins/aerospace.sh $sid"
+		--subscribe space.$sid aerospace_workspace_change \
+		--set space.$sid \
+		label.align=center \
+		label.width=30 \
+		label="$sid" \
+		click_script="aerospace workspace $sid" \
+		script="$CONFIG_DIR/plugins/aerospace.sh $sid"
 done
-
-sketchybar --set space.$first_workspace padding_left=2
-
-sketchybar --set space.$last_workspace padding_right=2
 
 sketchybar --add bracket spaces '/space\..*/' \
 	--set spaces background.color=$CHA_COLOR_BG1_75 \
 		background.corner_radius=20 \
-		background.height=24 \
+		background.height=24
 
 # Spacer 1 front app
 sketchybar --add item spacer_1 left \
@@ -72,17 +62,23 @@ source "$ITEM_DIR/front_app.sh"
 # Calendar
 sketchybar --add item calendar center \
 	--set calendar \
+		icon=📅 \
+		icon.color=$CHA_COLOR_YELLOW3 \
+		icon.padding_left=8 \
+		icon.padding_right=4 \
+		icon.font.size=13.0 \
+		icon.y_offset=1 \
 		background.color=$CHA_COLOR_BG1_75 \
 		background.corner_radius=20 \
 		background.height=24 \
-		label.padding_left=8 \
+		label.padding_left=4 \
 		label.padding_right=8 \
 		update_freq=10 \
 		script="$PLUGIN_DIR/calendar.sh"
 
-# Spacer 2 calendar-clock
-sketchybar --add item spacer_2 center \
-  --set spacer_2 width=4
+# Spacer
+sketchybar --add item spacer_date_time center \
+  --set spacer_date_time width=4
 
 # Clock
 sketchybar --add item clock center \
@@ -100,6 +96,24 @@ sketchybar --add item clock center \
 		update_freq=10 \
 		script="$PLUGIN_DIR/clock.sh"
 
+# Battery
+sketchybar --add item battery right \
+	--set battery \
+		label.padding_right=8 \
+		icon.padding_left=8 \
+		icon.padding_right=4 \
+		icon.font.size=11.0 \
+		icon.y_offset=1 \
+		update_freq=10 \
+		background.color=$CHA_COLOR_BG1_75 \
+		background.corner_radius=20 \
+		background.height=24 \
+		script="$PLUGIN_DIR/battery.sh"
+
+# Spacer
+sketchybar --add item spacer_battery right \
+  --set spacer_battery width=8
+
 # Wifi
 sketchybar --add item wifi right \
 	--set wifi \
@@ -115,9 +129,9 @@ sketchybar --add item wifi right \
 		background.height=24 \
 		script="$PLUGIN_DIR/wifi.sh"
 
-# Spacer 3
-sketchybar --add item spacer_3 right \
-  --set spacer_3 width=8
+# Spacer
+sketchybar --add item spacer_wifi right \
+  --set spacer_wifi width=8
 
 # Disk
 sketchybar --add item disk.number right \
@@ -140,9 +154,9 @@ sketchybar --add bracket disk disk.number disk.label \
 		background.height=24 \
 		padding_left=8
 
-# Spacer 2
-sketchybar --add item spacer_4 right \
-  --set spacer_4 width=8
+# Spacer
+sketchybar --add item spacer_disk right \
+  --set spacer_disk width=8
 
 # RAM
 sketchybar --add item ram.number right \
@@ -166,8 +180,8 @@ sketchybar --add bracket ram ram.number ram.label \
 		padding_left=8
 
 # Spacer 3
-sketchybar --add item spacer_5 right \
-  --set spacer_5 width=8
+sketchybar --add item spacer_ram right \
+  --set spacer_ram width=8
 
 # CPU
 sketchybar --add item cpu.number right \
