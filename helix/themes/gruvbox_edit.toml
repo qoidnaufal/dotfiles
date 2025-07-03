@@ -70,9 +70,9 @@
 "type.enum.variant" = { modifiers = ["italic"] }
 
 # "ui.background" = { bg = "bg0" }
-"ui.bufferline" = { fg = "fg1", bg = "bg1" }
+"ui.bufferline" = { fg = "fg1" }
 "ui.bufferline.active" = { fg = "bg0", bg = "yellow0" }
-"ui.bufferline.background" = { bg = "bg2" }
+# "ui.bufferline.background" = { bg = "bg2" }
 
 "ui.cursor" = { fg = "bg1", bg = "bg2" }
 "ui.cursor.insert" = { fg = "bg1", bg = "blue0" }
@@ -85,8 +85,8 @@
 "ui.cursor.primary.normal" = { fg = "bg1", bg = "fg3" }
 "ui.cursor.primary.select" = { fg = "bg1", bg = "orange1" }
 
-"ui.cursorline" = { bg = "bg0_s" }
-"ui.cursorline.primary" = { bg = "bg1" }
+# "ui.cursorline" = { bg = "bg0_s" }
+# "ui.cursorline.primary" = { bg = "bg1" }
 
 "ui.help" = { bg = "bg1", fg = "fg1" }
 "ui.linenr" = { fg = "bg3" }

@@ -1,7 +1,7 @@
 [terminal.shell]
 program = "/Users/qoidnaufal/.cargo/bin/nu"
 # args = ["-l"]
-args = ["-e", "zellij"]
+# args = ["-e", "zellij"]
 
 [scrolling]
 history = 10000
@@ -14,13 +14,13 @@ transparent_background_colors = true
 background = "#232323"
 
 [window]
-# decorations = "Transparent"
+decorations = "Buttonless"
 # position = { x = 15, y = 80 }
 # dimensions = { columns = 256, lines = 63 }
-# padding = { x = 5, y = 3 }
+padding = { x = 3, y = 4 }
 # dynamic_padding = true
-# opacity = 0.77
-# blur = true
+opacity = 0.77
+blur = true
 startup_mode = "Maximized"
 option_as_alt = "Both"
 dynamic_title = false

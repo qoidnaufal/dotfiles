@@ -5,7 +5,11 @@ SSID="$(ipconfig getsummary "$(networksetup -listallhardwareports | awk '/Wi-Fi|
 NAME=wifi
 
 if [ "$SSID" = "" ]; then
-    sketchybar -m --set $NAME label="-" icon=󰤭
+    sketchybar -m --set $NAME label.drawing=off icon=󰤭 icon.padding_right=6
 else
-    sketchybar -m --set $NAME label="$SSID" icon=
+    sketchybar -m --set $NAME \
+        label.drawing=on \
+        label="$SSID" icon=  \
+    		icon.padding_right=4  \
+    		label.padding_right=8
 fi

@@ -10,8 +10,10 @@ source "$CONFIG_DIR/tokens/colors.sh"
 default=(
 	# icon.font="Apple Symbols"
 	label.font="JetBrains Mono"
-	icon.color=$COLOR_WHITE
 	label.color=$COLOR_WHITE
+	icon.color=$COLOR_WHITE
+	background.border_width=2
+	background.border_color=$ORANGE
 )
 
 sketchybar --default "${default[@]}"
@@ -19,15 +21,15 @@ sketchybar --default "${default[@]}"
 # Bar Appearance
 bar=(
 	height=30
-	color=0xff303030
+	color=0x00303030
 	position=top
 	sticky=on
 	topmost=window
 	y_offset=7
-	margin=10
+	# margin=10
 	corner_radius=20
-	border_width=1
-	border_color=$CHA_COLOR_YELLOW3_50
+	# border_width=1
+	# border_color=$CHA_COLOR_YELLOW3_50
 )
 sketchybar --bar "${bar[@]}"
 
@@ -42,7 +44,7 @@ for sid in $workspaces; do
 		--subscribe space.$sid aerospace_workspace_change \
 		--set space.$sid \
 		label.align=center \
-		label.width=30 \
+		label.width=25 \
 		label="$sid" \
 		click_script="aerospace workspace $sid" \
 		script="$CONFIG_DIR/plugins/aerospace.sh $sid"
@@ -55,30 +57,30 @@ sketchybar --add bracket spaces '/space\..*/' \
 
 # Spacer 1 front app
 sketchybar --add item spacer_1 left \
-  --set spacer_1 width=8
+  --set spacer_1 width=8 background.color=0x00000000 background.border_width=0
 
 source "$ITEM_DIR/front_app.sh"
 
+# icon=♺ \
+# icon.color=$CHA_COLOR_YELLOW3 \
+# icon.padding_left=8 \
+# icon.padding_right=4 \
+# icon.font.size=13.0 \
+# icon.y_offset=1 \
 # Calendar
 sketchybar --add item calendar center \
 	--set calendar \
-		icon=📅 \
-		icon.color=$CHA_COLOR_YELLOW3 \
-		icon.padding_left=8 \
-		icon.padding_right=4 \
-		icon.font.size=13.0 \
-		icon.y_offset=1 \
 		background.color=$CHA_COLOR_BG1_75 \
 		background.corner_radius=20 \
 		background.height=24 \
-		label.padding_left=4 \
+		label.padding_left=8 \
 		label.padding_right=8 \
 		update_freq=10 \
 		script="$PLUGIN_DIR/calendar.sh"
 
 # Spacer
 sketchybar --add item spacer_date_time center \
-  --set spacer_date_time width=4
+  --set spacer_date_time width=4 background.color=0x00000000 background.border_width=0
 
 # Clock
 sketchybar --add item clock center \
@@ -112,15 +114,13 @@ sketchybar --add item battery right \
 
 # Spacer
 sketchybar --add item spacer_battery right \
-  --set spacer_battery width=8
+  --set spacer_battery width=8 background.color=0x00000000 background.border_width=0
 
 # Wifi
 sketchybar --add item wifi right \
 	--set wifi \
-		label.padding_right=8 \
 		icon.color=$CHA_COLOR_YELLOW3 \
 		icon.padding_left=8 \
-		icon.padding_right=4 \
 		icon.font.size=11.0 \
 		icon.y_offset=1 \
 		update_freq=10 \
@@ -131,7 +131,7 @@ sketchybar --add item wifi right \
 
 # Spacer
 sketchybar --add item spacer_wifi right \
-  --set spacer_wifi width=8
+  --set spacer_wifi width=8 background.color=0x00000000 background.border_width=0
 
 # Disk
 sketchybar --add item disk.number right \
@@ -156,7 +156,7 @@ sketchybar --add bracket disk disk.number disk.label \
 
 # Spacer
 sketchybar --add item spacer_disk right \
-  --set spacer_disk width=8
+  --set spacer_disk width=8 background.color=0x00000000 background.border_width=0
 
 # RAM
 sketchybar --add item ram.number right \
@@ -181,7 +181,7 @@ sketchybar --add bracket ram ram.number ram.label \
 
 # Spacer 3
 sketchybar --add item spacer_ram right \
-  --set spacer_ram width=8
+  --set spacer_ram width=8 background.color=0x00000000 background.border_width=0
 
 # CPU
 sketchybar --add item cpu.number right \
