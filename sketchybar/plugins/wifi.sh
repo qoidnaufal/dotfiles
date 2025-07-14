@@ -5,7 +5,11 @@ SSID="$(ipconfig getsummary "$(networksetup -listallhardwareports | awk '/Wi-Fi|
 NAME=wifi
 
 if [ "$SSID" = "" ]; then
-    sketchybar -m --set $NAME label.drawing=off icon=󰤭 icon.padding_right=6
+    sketchybar -m --set $NAME \
+        label.drawing=on \
+        label="DISCONNECTED" \
+        icon=󰤭 \
+        icon.padding_right=6
 else
     sketchybar -m --set $NAME \
         label.drawing=on \

@@ -34,21 +34,21 @@ config.keys = {
   },
   {
     key = 'h',
-    mods = 'CTRL|ALT',
+    mods = 'CTRL|SHIFT',
     action = wezterm.action.SplitPane {
       direction = 'Left'
     }
   },
   {
     key = 'k',
-    mods = 'CTRL|ALT',
+    mods = 'CTRL|SHIFT',
     action = wezterm.action.SplitPane {
       direction = 'Up'
     }
   },
   {
     key = 'j',
-    mods = 'CTRL|ALT',
+    mods = 'CTRL|SHIFT',
     action = wezterm.action.SplitPane {
       direction = 'Down'
     }
@@ -56,22 +56,22 @@ config.keys = {
   -- navigate between pane: alt[option] + hjkl
   {
     key = 'l',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = wezterm.action.ActivatePaneDirection 'Right'
   },
   {
     key = 'h',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = wezterm.action.ActivatePaneDirection 'Left'
   },
   {
     key = 'k',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = wezterm.action.ActivatePaneDirection 'Up'
   },
   {
     key = 'j',
-    mods = 'ALT',
+    mods = 'CTRL',
     action = wezterm.action.ActivatePaneDirection 'Down'
   },
 }

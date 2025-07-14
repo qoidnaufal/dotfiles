@@ -14,6 +14,7 @@ default=(
 	icon.color=$COLOR_WHITE
 	background.border_width=2
 	background.border_color=$ORANGE
+	background.corner_radius=7
 )
 
 sketchybar --default "${default[@]}"
@@ -51,8 +52,8 @@ for sid in $workspaces; do
 done
 
 sketchybar --add bracket spaces '/space\..*/' \
-	--set spaces background.color=$CHA_COLOR_BG1_75 \
-		background.corner_radius=20 \
+	--set spaces background.color=$HIBISCUS \
+		background.border_color=$PIZZAZ \
 		background.height=24
 
 # Spacer 1 front app
@@ -71,27 +72,29 @@ source "$ITEM_DIR/front_app.sh"
 sketchybar --add item calendar center \
 	--set calendar \
 		background.color=$CHA_COLOR_BG1_75 \
-		background.corner_radius=20 \
+		background.border_color=$CHA_HELIOTROPE \
 		background.height=24 \
 		label.padding_left=8 \
 		label.padding_right=8 \
+		label.color=$WHITE \
 		update_freq=10 \
 		script="$PLUGIN_DIR/calendar.sh"
 
 # Spacer
 sketchybar --add item spacer_date_time center \
-  --set spacer_date_time width=4 background.color=0x00000000 background.border_width=0
+  --set spacer_date_time width=8 background.color=0x00000000 background.border_width=0
 
 # Clock
 sketchybar --add item clock center \
 	--set clock \
 		icon=  \
-		icon.color=$CHA_COLOR_YELLOW3 \
+		icon.color=$BLACK \
 		icon.padding_left=8 \
 		icon.padding_right=4 \
 		icon.font.size=13.0 \
 		icon.y_offset=1 \
-		background.color=$CHA_COLOR_BG1_75 \
+		background.color=$CHA_HELIOTROPE_75 \
+		background.border_color=$BLACK \
 		background.corner_radius=20 \
 		background.height=24 \
 		label.padding_right=8 \
@@ -108,6 +111,7 @@ sketchybar --add item battery right \
 		icon.y_offset=1 \
 		update_freq=10 \
 		background.color=$CHA_COLOR_BG1_75 \
+		background.border_color=$WHITE\
 		background.corner_radius=20 \
 		background.height=24 \
 		script="$PLUGIN_DIR/battery.sh"
@@ -119,13 +123,14 @@ sketchybar --add item spacer_battery right \
 # Wifi
 sketchybar --add item wifi right \
 	--set wifi \
-		icon.color=$CHA_COLOR_YELLOW3 \
+		icon.color=$YELLOW \
 		icon.padding_left=8 \
 		icon.font.size=11.0 \
 		icon.y_offset=1 \
 		update_freq=10 \
 		background.color=$CHA_COLOR_BG1_75 \
 		background.corner_radius=20 \
+		background.border_color=$YELLOW \
 		background.height=24 \
 		script="$PLUGIN_DIR/wifi.sh"
 
@@ -145,11 +150,12 @@ sketchybar --add item disk.label right \
 		label="DISK:" \
 		label.padding_left=8 \
 	    label.padding_right=4 \
-		label.color=$CHA_COLOR_YELLOW3
+		label.color=$CYAN
 
 sketchybar --add bracket disk disk.number disk.label \
 	--set disk \
 		background.color=$CHA_COLOR_BG1_75 \
+		background.border_color=$CYAN \
 		background.corner_radius=20 \
 		background.height=24 \
 		padding_left=8
@@ -170,11 +176,12 @@ sketchybar --add item ram.label right \
 		label="RAM:" \
 		label.padding_left=8 \
 	    label.padding_right=4 \
-		label.color=$CHA_COLOR_YELLOW3
+		label.color=$GREEN
 
 sketchybar --add bracket ram ram.number ram.label \
 	--set ram \
 		background.color=$CHA_COLOR_BG1_75 \
+		background.border_color=$GREEN \
 		background.corner_radius=20 \
 		background.height=24 \
 		padding_left=8
@@ -195,11 +202,12 @@ sketchybar --add item cpu.label right \
 		label="CPU:" \
 		label.padding_left=8 \
     	label.padding_right=4 \
-		label.color=$CHA_COLOR_YELLOW3
+		label.color=$RED_RIBBON
 
 sketchybar --add bracket cpu cpu.number cpu.label \
 	--set cpu \
 		background.color=$CHA_COLOR_BG1_75 \
+		background.border_color=$RED_RIBBON \
 		background.corner_radius=20 \
 		background.height=24 \
 		padding_left=8
