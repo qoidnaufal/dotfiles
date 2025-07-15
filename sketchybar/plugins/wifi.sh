@@ -9,7 +9,8 @@ if [ "$SSID" = "" ]; then
         label.drawing=on \
         label="DISCONNECTED" \
         icon=󰤭 \
-        icon.padding_right=6
+        icon.padding_right=4 \
+        label.padding_right=8
 else
     sketchybar -m --set $NAME \
         label.drawing=on \

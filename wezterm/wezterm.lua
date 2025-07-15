@@ -24,56 +24,54 @@ config.keys = {
     mods = 'CMD',
     action = wezterm.action.CloseCurrentPane { confirm = true },
   },
-  -- split the pane: ctrl + alt[option] + hjkl
-  {
-    key = 'l',
-    mods = 'CTRL|ALT',
-    action = wezterm.action.SplitPane {
-      direction = 'Right'
-    }
-  },
-  {
-    key = 'h',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.SplitPane {
-      direction = 'Left'
-    }
-  },
-  {
-    key = 'k',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.SplitPane {
-      direction = 'Up'
-    }
-  },
-  {
-    key = 'j',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.SplitPane {
-      direction = 'Down'
-    }
-  },
-  -- navigate between pane: alt[option] + hjkl
-  {
-    key = 'l',
-    mods = 'CTRL',
-    action = wezterm.action.ActivatePaneDirection 'Right'
-  },
-  {
-    key = 'h',
-    mods = 'CTRL',
-    action = wezterm.action.ActivatePaneDirection 'Left'
-  },
-  {
-    key = 'k',
-    mods = 'CTRL',
-    action = wezterm.action.ActivatePaneDirection 'Up'
-  },
-  {
-    key = 'j',
-    mods = 'CTRL',
-    action = wezterm.action.ActivatePaneDirection 'Down'
-  },
+  -- {
+  --   key = 'l',
+  --   mods = 'CTRL|SHIFT',
+  --   action = wezterm.action.SplitPane {
+  --     direction = 'Right'
+  --   }
+  -- },
+  -- {
+  --   key = 'h',
+  --   mods = 'CTRL|SHIFT',
+  --   action = wezterm.action.SplitPane {
+  --     direction = 'Left'
+  --   }
+  -- },
+  -- {
+  --   key = 'k',
+  --   mods = 'CTRL|SHIFT',
+  --   action = wezterm.action.SplitPane {
+  --     direction = 'Up'
+  --   }
+  -- },
+  -- {
+  --   key = 'j',
+  --   mods = 'CTRL|SHIFT',
+  --   action = wezterm.action.SplitPane {
+  --     direction = 'Down'
+  --   }
+  -- },
+  -- {
+  --   key = 'l',
+  --   mods = 'CTRL',
+  --   action = wezterm.action.ActivatePaneDirection 'Right'
+  -- },
+  -- {
+  --   key = 'h',
+  --   mods = 'CTRL',
+  --   action = wezterm.action.ActivatePaneDirection 'Left'
+  -- },
+  -- {
+  --   key = 'k',
+  --   mods = 'CTRL',
+  --   action = wezterm.action.ActivatePaneDirection 'Up'
+  -- },
+  -- {
+  --   key = 'j',
+  --   mods = 'CTRL',
+  --   action = wezterm.action.ActivatePaneDirection 'Down'
+  -- },
 }
 
 return config
