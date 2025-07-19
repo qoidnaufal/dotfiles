@@ -3,11 +3,13 @@
 POPUP_OFF='sketchybar --set apple.logo popup.drawing=off'
 POPUP_CLICK_SCRIPT='sketchybar --set $NAME popup.drawing=toggle'
 
+# icon=
+
 apple_logo=(
-  icon=
-  icon.font="JetBrains Mono:Black:17.0"
+  icon=♞
+  icon.font="JetBrains Mono:Black:19.0"
   icon.color=$EASTERN_BLUE
-  icon.y_offset=-1
+  icon.y_offset=1
 	icon.padding_left=10
 	icon.padding_right=10
 	background.color=$YELLOW

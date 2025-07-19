@@ -1,5 +1,7 @@
 command = ~/.cargo/bin/nu
 
+theme = Espresso
+
 window-width = 256
 window-height = 64
 window-padding-x = 5
@@ -14,6 +16,7 @@ background-blur-radius = 30
 
 cursor-style = bar
 cursor-style-blink = false
+cursor-text = #000000
 
 font-family = "JetBrainsMono Nerd Font"
 font-size = 12

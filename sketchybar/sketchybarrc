@@ -15,6 +15,7 @@ default=(
 	background.border_width=2
 	background.border_color=$ORANGE
 	background.corner_radius=7
+	background.height=24
 )
 
 sketchybar --default "${default[@]}"
@@ -53,8 +54,7 @@ done
 
 sketchybar --add bracket spaces '/space\..*/' \
 	--set spaces background.color=$HIBISCUS \
-		background.border_color=$PIZZAZ \
-		background.height=24
+		background.border_color=$PIZZAZ
 
 # Spacer 1 front app
 sketchybar --add item spacer_1 left \
@@ -62,19 +62,17 @@ sketchybar --add item spacer_1 left \
 
 source "$ITEM_DIR/front_app.sh"
 
-# icon=♺ \
-# icon.color=$CHA_COLOR_YELLOW3 \
-# icon.padding_left=8 \
-# icon.padding_right=4 \
-# icon.font.size=13.0 \
-# icon.y_offset=1 \
 # Calendar
 sketchybar --add item calendar center \
 	--set calendar \
-		background.color=$GREY \
+		icon=󰸗 \
+		icon.color=$PASTEL_GREEN \
+		icon.padding_left=8 \
+		icon.padding_right=4 \
+		icon.font.size=13.0 \
+		icon.y_offset=1 \
+		background.color=$CHA_COLOR_BG2_50 \
 		background.border_color=$PASTEL_GREEN \
-		background.height=24 \
-		label.padding_left=8 \
 		label.padding_right=8 \
 		label.color=$WHITE \
 		update_freq=10 \
@@ -93,10 +91,8 @@ sketchybar --add item clock center \
 		icon.padding_right=4 \
 		icon.font.size=13.0 \
 		icon.y_offset=1 \
-		background.color=$GREY \
+		background.color=$CHA_COLOR_BG2_50 \
 		background.border_color=$PASTEL_GREEN \
-		background.corner_radius=7 \
-		background.height=24 \
 		label.padding_right=8 \
 		update_freq=10 \
 		script="$PLUGIN_DIR/clock.sh"
@@ -110,10 +106,8 @@ sketchybar --add item battery right \
 		icon.font.size=11.0 \
 		icon.y_offset=1 \
 		update_freq=10 \
-		background.color=$CHA_COLOR_BG1_75 \
+		background.color=$CHA_COLOR_BG2_50 \
 		background.border_color=$PASTEL_GREEN \
-		background.corner_radius=7 \
-		background.height=24 \
 		script="$PLUGIN_DIR/battery.sh"
 
 # Spacer
@@ -129,9 +123,7 @@ sketchybar --add item wifi right \
 		icon.y_offset=1 \
 		update_freq=10 \
 		background.color=$EASTERN_BLUE \
-		background.corner_radius=7 \
-		background.border_color=$BLACK \
-		background.height=24 \
+		background.border_color=$YELLOW \
 		script="$PLUGIN_DIR/wifi.sh"
 
 # Spacer
@@ -143,22 +135,23 @@ sketchybar --add item disk.number right \
 	--set disk.number \
 	    label.padding_right=8 \
 		label.color=$WHITE \
+		label.padding_left=6 \
 		update_freq=10 \
 		script="$PLUGIN_DIR/disk.sh"
 
 sketchybar --add item disk.label right \
 	--set disk.label \
-		label="DISK:" \
-		label.padding_left=8 \
-	    label.padding_right=4 \
-		label.color=$YELLOW
+		label="DISK" \
+		background.color=$PASTEL_GREEN \
+		background.border_width=0 \
+		label.padding_left=4 \
+    	label.padding_right=4 \
+		label.color=$BLACK
 
 sketchybar --add bracket disk disk.number disk.label \
 	--set disk \
-		background.color=$BLUE \
-		background.border_color=$YELLOW \
-		background.corner_radius=7 \
-		background.height=24 \
+		background.color=$CHA_COLOR_BG2_50 \
+		background.border_color=$PASTEL_GREEN \
 		padding_left=8
 
 # Spacer
@@ -170,22 +163,23 @@ sketchybar --add item ram.number right \
 	--set ram.number \
 	    label.padding_right=8 \
 		label.color=$WHITE \
+		label.padding_left=6 \
 		update_freq=2 \
 		script="$PLUGIN_DIR/ram.sh"
 
 sketchybar --add item ram.label right \
 	--set ram.label \
-		label="RAM:" \
-		label.padding_left=8 \
-	    label.padding_right=4 \
-		label.color=$YELLOW
+		label="RAM" \
+		background.color=$PASTEL_GREEN \
+		background.border_width=0 \
+		label.padding_left=4 \
+    	label.padding_right=4 \
+		label.color=$BLACK
 
 sketchybar --add bracket ram ram.number ram.label \
 	--set ram \
-		background.color=$PARSLEY \
-		background.border_color=$MAGENTA \
-		background.corner_radius=7 \
-		background.height=24 \
+		background.color=$CHA_COLOR_BG2_50 \
+		background.border_color=$PASTEL_GREEN \
 		padding_left=8
 
 # Spacer 3
@@ -197,22 +191,23 @@ sketchybar --add item cpu.number right \
 	--set cpu.number \
     	label.padding_right=8 \
 		label.color=$WHITE \
+		label.padding_left=6 \
 		update_freq=2 \
 		script="$PLUGIN_DIR/cpu.sh"
 
 sketchybar --add item cpu.label right \
 	--set cpu.label \
-		label="CPU:" \
-		label.padding_left=8 \
+		label="CPU" \
+		background.color=$PASTEL_GREEN \
+		background.border_width=0 \
+		label.padding_left=4 \
     	label.padding_right=4 \
-		label.color=$YELLOW
+		label.color=$BLACK
 
 sketchybar --add bracket cpu cpu.number cpu.label \
 	--set cpu \
-		background.color=$RED_RIBBON \
-		background.border_color=$CYAN \
-		background.corner_radius=7 \
-		background.height=24 \
+		background.color=$CHA_COLOR_BG2_50 \
+		background.border_color=$PASTEL_GREEN \
 		padding_left=8
 
 sketchybar --hotload on
