@@ -7,10 +7,10 @@ format = """
 $status\
 $directory\
 $git_branch\
-$git_status\
 $cmd_duration\
 $character\
 """
+# $git_status\
 
 [palettes.default]
 prompt_ok  = "#8047c1"
@@ -54,7 +54,7 @@ truncation_length = 3
 
 [git_branch]
 # format = "[─](fg:separator)[](fg:git_branch)[](fg:icon bg:git_branch)[](fg:git_branch bg:bg0)[ $branch](bg:bg0 fg:fg0)"
-format = "[ ](fg:separator)[](fg:git_branch)[](fg:icon bg:git_branch)[](fg:git_branch bg:bg0)[ $branch](bg:bg0 fg:fg0)"
+format = "[ ](fg:separator)[](fg:git_branch)[](fg:icon bg:git_branch)[](fg:git_branch bg:bg0)[ $branch](bg:bg0 fg:fg0)[](fg:bg0)"
 
 [git_status]
 format = "[](fg:bg0 bg:git_status)[$all_status$ahead_behind](fg:icon bg:git_status)[](fg:git_status)"

@@ -1,4 +1,4 @@
-theme = "gruvbox_edit"
+theme = "autumn_edit"
 
 [editor]
 cursorline = true

@@ -44,7 +44,7 @@
 "special" = "my_yellow1"
 "string"  = "my_green"
 # "type" = { fg = "my_white3", modifiers = ["italic"] }
-"type" = "#f2c591"
+"type" = "my_orange"
 # "ui.background" = { bg = "my_gray0" }
 "ui.cursor" = { bg = "my_white4", fg = "my_black" }
 # "ui.cursorline" = { bg = "my_gray3" }
@@ -59,7 +59,7 @@
 "ui.linenr" = { fg = "my_gray7" } #, bg = "my_gray0" }
 "ui.linenr.selected" = { fg = "my_red" } #, bg = "my_gray0"}
 "ui.bufferline" = { fg = "my_white2" } #, bg = "my_gray2" }
-"ui.bufferline.active" = { fg = "my_black", bg = "my_green" }
+"ui.bufferline.active" = { fg = "my_black", bg = "my_orange" }
 # "ui.bufferline.background" = { bg = "my_gray0" }
 "ui.menu" = { fg = "my_white1", bg = "my_gray2" }
 "ui.menu.selected" = { fg = "my_gray2", bg = "my_gray6" }
@@ -106,3 +106,5 @@ my_white3     = "#F3F2CC" # Classes, Markup Bold, Search Text Background
 my_white4     = "#7e7d6a" # Cursor match
 my_yellow1    = "#FAD566" # Functions, Methods, Attribute IDs, Headings
 my_yellow2    = "#ffff9f" # Debug, Info
+my_yellow3    = "#f7d640"
+my_orange     = "#e7a373"
