@@ -53,8 +53,8 @@ for sid in $workspaces; do
 done
 
 sketchybar --add bracket spaces '/space\..*/' \
-	--set spaces background.color=$HIBISCUS \
-		background.border_color=$PIZZAZ
+	--set spaces background.color=$PIZZAZ \
+		background.border_color=$EASTERN_BLUE
 
 # Spacer 1 front app
 sketchybar --add item spacer_1 left \
@@ -66,13 +66,13 @@ source "$ITEM_DIR/front_app.sh"
 sketchybar --add item calendar center \
 	--set calendar \
 		icon=󰸗 \
-		icon.color=$PASTEL_GREEN \
+		icon.color=$PIZZAZ \
 		icon.padding_left=8 \
 		icon.padding_right=4 \
 		icon.font.size=13.0 \
 		icon.y_offset=1 \
 		background.color=$CHA_COLOR_BG2_50 \
-		background.border_color=$PASTEL_GREEN \
+		background.border_color=$PIZZAZ \
 		label.padding_right=8 \
 		label.color=$WHITE \
 		update_freq=10 \
@@ -86,13 +86,13 @@ sketchybar --add item spacer_date_time center \
 sketchybar --add item clock center \
 	--set clock \
 		icon=  \
-		icon.color=$PASTEL_GREEN \
+		icon.color=$PIZZAZ \
 		icon.padding_left=8 \
 		icon.padding_right=4 \
 		icon.font.size=13.0 \
 		icon.y_offset=1 \
 		background.color=$CHA_COLOR_BG2_50 \
-		background.border_color=$PASTEL_GREEN \
+		background.border_color=$PIZZAZ \
 		label.padding_right=8 \
 		update_freq=10 \
 		script="$PLUGIN_DIR/clock.sh"
@@ -107,7 +107,7 @@ sketchybar --add item battery right \
 		icon.y_offset=1 \
 		update_freq=10 \
 		background.color=$CHA_COLOR_BG2_50 \
-		background.border_color=$PASTEL_GREEN \
+		background.border_color=$PIZZAZ \
 		script="$PLUGIN_DIR/battery.sh"
 
 # Spacer
@@ -117,13 +117,12 @@ sketchybar --add item spacer_battery right \
 # Wifi
 sketchybar --add item wifi right \
 	--set wifi \
-		icon.color=$YELLOW \
 		icon.padding_left=8 \
 		icon.font.size=11.0 \
 		icon.y_offset=1 \
 		update_freq=10 \
-		background.color=$EASTERN_BLUE \
-		background.border_color=$YELLOW \
+		background.color=$CHA_COLOR_BG2_50 \
+		background.border_color=$PIZZAZ \
 		script="$PLUGIN_DIR/wifi.sh"
 
 # Spacer
@@ -142,7 +141,7 @@ sketchybar --add item disk.number right \
 sketchybar --add item disk.label right \
 	--set disk.label \
 		label="DISK" \
-		background.color=$PASTEL_GREEN \
+		background.color=$PIZZAZ \
 		background.border_width=0 \
 		label.padding_left=4 \
     	label.padding_right=4 \
@@ -151,7 +150,7 @@ sketchybar --add item disk.label right \
 sketchybar --add bracket disk disk.number disk.label \
 	--set disk \
 		background.color=$CHA_COLOR_BG2_50 \
-		background.border_color=$PASTEL_GREEN \
+		background.border_color=$PIZZAZ \
 		padding_left=8
 
 # Spacer
@@ -170,7 +169,7 @@ sketchybar --add item ram.number right \
 sketchybar --add item ram.label right \
 	--set ram.label \
 		label="RAM" \
-		background.color=$PASTEL_GREEN \
+		background.color=$PIZZAZ \
 		background.border_width=0 \
 		label.padding_left=4 \
     	label.padding_right=4 \
@@ -179,7 +178,7 @@ sketchybar --add item ram.label right \
 sketchybar --add bracket ram ram.number ram.label \
 	--set ram \
 		background.color=$CHA_COLOR_BG2_50 \
-		background.border_color=$PASTEL_GREEN \
+		background.border_color=$PIZZAZ \
 		padding_left=8
 
 # Spacer 3
@@ -198,7 +197,7 @@ sketchybar --add item cpu.number right \
 sketchybar --add item cpu.label right \
 	--set cpu.label \
 		label="CPU" \
-		background.color=$PASTEL_GREEN \
+		background.color=$PIZZAZ \
 		background.border_width=0 \
 		label.padding_left=4 \
     	label.padding_right=4 \
@@ -207,7 +206,7 @@ sketchybar --add item cpu.label right \
 sketchybar --add bracket cpu cpu.number cpu.label \
 	--set cpu \
 		background.color=$CHA_COLOR_BG2_50 \
-		background.border_color=$PASTEL_GREEN \
+		background.border_color=$PIZZAZ \
 		padding_left=8
 
 sketchybar --hotload on
