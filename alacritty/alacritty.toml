@@ -1,7 +1,7 @@
 [terminal.shell]
 program = "/Users/qoidnaufal/.cargo/bin/nu"
 # args = ["-l"]
-# args = ["-e", "zellij"]
+args = ["-e", "zellij"]
 
 [scrolling]
 history = 10000
