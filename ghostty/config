@@ -8,6 +8,9 @@ window-padding-x = 5
 window-padding-y = 5
 window-padding-balance = true
 
+window-inherit-working-directory = true
+working-directory = home
+
 macos-titlebar-style = hidden
 macos-option-as-alt = true
 
